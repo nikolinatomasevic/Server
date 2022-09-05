@@ -14,11 +14,16 @@ import rs.ac.bg.fon.ps.domain.OpstiDomenskiObjekat;
 import rs.ac.bg.fon.ps.domain.StavkaReversa;
 
 /**
- *
+ * Predstavlja brokera baze podataka.
+ * 
+ * @see RepositoryDB
  * @author ACER
  */
 public class BrokerDB implements RepositoryDB<OpstiDomenskiObjekat> {
 
+	/**
+	 * Konekcija sa bazom podataka
+	 */
 	private Connection connection;
 
 	@Override
@@ -105,6 +110,13 @@ public class BrokerDB implements RepositoryDB<OpstiDomenskiObjekat> {
 		}
 	}
 
+	/**
+	 * Vraca razduzenu kolicinu stavke reversa iz baze podataka.
+	 * 
+	 * @param stavka stavka reversa cija se razduzena kolicina trazi
+	 * @return razduzena kolicina stavke reversa kao ceo broj
+	 * @throws Exception u slucaju da dodje do greske prilikom citanja podataka iz baze
+	 */
 	public int vratiRazduzenuKolicinu(StavkaReversa stavka) throws Exception {
 		try {
 			connection = DBConnectionFactory.getInstance().getConnection();

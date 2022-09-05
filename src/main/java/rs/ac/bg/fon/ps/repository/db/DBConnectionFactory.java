@@ -11,18 +11,34 @@ import java.sql.DriverManager;
 import java.util.Properties;
 
 /**
- *
+ * Predstavlja klasu za uspostavljanje konekcije sa bazom podataka.
+ * 
  * @author ACER
  */
 public class DBConnectionFactory {
 
+	/**
+	 * Konekcija sa bazom podataka
+	 */
 	private Connection connection;
+	/**
+	 * Staticka instanca same klase
+	 */
 	private static DBConnectionFactory instance;
 
+	/**
+	 * Inicijalizuje novi objekat klase.
+	 */
 	private DBConnectionFactory() {
 
 	}
 
+	/**
+	 * Vraca instancu klase.
+	 * U slucaju da instanca nije vec kreirana tj. da ima vrednost null, kreira novu instancu klase.
+	 * 
+	 * @return instanca klase tipa DBConnectionFactory
+	 */
 	public static DBConnectionFactory getInstance() {
 		if (instance == null) {
 			instance = new DBConnectionFactory();
@@ -30,6 +46,12 @@ public class DBConnectionFactory {
 		return instance;
 	}
 
+	/**
+	 * Uspostavlja i vraca konekciju sa bazom podataka.
+	 * 
+	 * @return konekcija sa bazom podataka tipa Connection
+	 * @throws Exception u slucaju da dodje do greske prilikom uspostavljanja konekcije sa bazom
+	 */
 	public Connection getConnection() throws Exception {
 		if (connection == null || connection.isClosed()) {
 			try {
