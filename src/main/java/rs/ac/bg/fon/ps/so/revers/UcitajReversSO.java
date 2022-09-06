@@ -11,11 +11,18 @@ import rs.ac.bg.fon.ps.repository.db.BrokerDB;
 import rs.ac.bg.fon.ps.so.AbstractSO;
 
 /**
+ * Predstavlja sistemsku operaciju koja menja stavku reversa u bazi podataka.
  *
  * @author ACER
  */
 public class UcitajReversSO extends AbstractSO {
 
+	/**
+	 * Proverava da li su ispunjeni svi preduslovi za izmenu stavke reversa u bazi podataka.
+	 *
+	 * @param param stavka reversa koju je potrebno izmeniti
+	 * @throws Exception u slucaju da bilo koji od preduslova nije ispunjen
+	 */
 	@Override
 	protected void precondition(Object param) throws Exception {
 		if (param == null || !(param instanceof StavkaReversa)) {
@@ -27,6 +34,12 @@ public class UcitajReversSO extends AbstractSO {
 		}
 	}
 
+	/**
+	 * Menja stavku reversa koja je proslednjena kao ulazni parametar u bazi podataka.
+	 * 
+	 * @param param stavka reversa koju je potrebno izmeniti
+	 * @throws Exception u slucaju da dodje do greske prilikom izmene stavke reversa
+	 */
 	@Override
 	protected void executeOperation(Object param) throws Exception {
 		int vecRazduzio = 0;

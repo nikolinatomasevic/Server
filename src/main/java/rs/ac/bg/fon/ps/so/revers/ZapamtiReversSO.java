@@ -11,11 +11,18 @@ import rs.ac.bg.fon.ps.domain.StavkaReversa;
 import rs.ac.bg.fon.ps.so.AbstractSO;
 
 /**
+ * Predstavlja sistemsku operaciju koja pamti (cuva) novi revers sa svim stavkama u bazi podataka.
  *
  * @author ACER
  */
 public class ZapamtiReversSO extends AbstractSO {
 
+	/**
+	 * Proverava da li su ispunjeni svi preduslovi za cuvanje novog reversa i njegovih stavki u bazi podataka.
+	 * 
+	 * @param param novi revers koji je potrebno sacuvati
+	 * @throws Exception u slucaju da bilo koji od preduslova nije ispunjen
+	 */
 	@Override
 	protected void precondition(Object param) throws Exception {
 		if (param == null || !(param instanceof Revers)) {
@@ -78,6 +85,12 @@ public class ZapamtiReversSO extends AbstractSO {
 		}
 	}
 
+	/**
+	 * Pamti (cuva) novi revers sa svim stavkama u bazi podataka.
+	 * 
+	 * @param param novi revers koji je potrebno sacuvati
+	 * @throws Exception u slucaju da dodje do greske prilikom cuvanja novog reversa i njegovih stavki
+	 */
 	@Override
 	protected void executeOperation(Object param) throws Exception {
 		((Revers) param).setBrojReversa(broker.nadjiID(new Revers()));

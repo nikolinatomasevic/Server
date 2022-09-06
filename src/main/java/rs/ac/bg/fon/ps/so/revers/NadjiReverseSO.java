@@ -11,6 +11,7 @@ import rs.ac.bg.fon.ps.domain.StavkaReversa;
 import rs.ac.bg.fon.ps.so.AbstractSO;
 
 /**
+ * Predstavlja sistemsku operaciju koja ucitava stavke reversa iz baze podataka koje ispunjavaju odredjene kriterijume pretrage.
  *
  * @author ACER
  */
@@ -21,6 +22,14 @@ public class NadjiReverseSO extends AbstractSO {
 
 	}
 
+	/**
+	 * Ucitava stavke reversa iz baze podataka koji ispunjavaju odredjene kriterijume pretrage.
+	 * 
+	 * @param param lista objekata tipa Object koja sadrzi dva elementa.
+	 * Prvi element predstavlja objekat tipa Revers koji sadrzi kriterijume pretrage,
+	 * a drugi element predstavlja listu objekata tipa StavkaReversa u koju se ucitava lista iz baze
+	 * @throws Exception u slucaju da dodje do greske prilikom ucitavanja stavki reversa iz baze podataka
+	 */
 	@Override
 	protected void executeOperation(Object param) throws Exception {
 		Revers r = (Revers) ((List<Object>) param).get(0);
