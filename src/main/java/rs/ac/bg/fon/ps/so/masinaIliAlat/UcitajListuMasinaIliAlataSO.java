@@ -10,6 +10,7 @@ import java.util.List;
 import rs.ac.bg.fon.ps.so.AbstractSO;
 
 /**
+ * Predstavlja sistemsku operaciju koja ucitava sve masine i alat iz baze podataka.
  *
  * @author ACER
  */
@@ -20,6 +21,12 @@ public class UcitajListuMasinaIliAlataSO extends AbstractSO {
 
 	}
 
+	/**
+	 * Ucitava sve masine i alat iz baze podataka.
+	 * 
+	 * @param param lista objekata tipa MasinaIliAlat u koju se ucitava lista masina i alata iz baze
+	 * @throws Exception u slucaju da dodje do greske prilikom ucitavanja masina i alata iz baze podataka
+	 */
 	@Override
 	protected void executeOperation(Object param) throws Exception {
 		((List<MasinaIliAlat>) param).addAll((List<MasinaIliAlat>) broker.ucitajListu(new MasinaIliAlat()));
