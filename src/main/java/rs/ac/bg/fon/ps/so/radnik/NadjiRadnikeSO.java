@@ -11,6 +11,7 @@ import rs.ac.bg.fon.ps.domain.Radnik;
 import rs.ac.bg.fon.ps.so.AbstractSO;
 
 /**
+ * Predstavlja sistemsku operaciju koja ucitava radnike iz baze podataka koji ispunjavaju odredjene kriterijume pretrage.
  *
  * @author ACER
  */
@@ -21,6 +22,14 @@ public class NadjiRadnikeSO extends AbstractSO {
 
 	}
 
+	/**
+	 * Ucitava radnike iz baze podataka koji ispunjavaju odredjene kriterijume pretrage.
+	 * 
+	 * @param param lista objekata tipa Object koja sadrzi dva elementa.
+	 * Prvi element predstavlja objekat tipa Radnik koji sadrzi kriterijume pretrage,
+	 * a drugi element predstavlja listu objekata tipa Radnik u koju se ucitava lista iz baze
+	 * @throws Exception u slucaju da dodje do greske prilikom ucitavanja radnika iz baze podataka
+	 */
 	@Override
 	protected void executeOperation(Object param) throws Exception {
 		if (((List<Object>) param).get(0) instanceof Magacioner) {

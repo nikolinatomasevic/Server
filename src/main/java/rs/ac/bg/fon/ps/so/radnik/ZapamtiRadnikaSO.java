@@ -17,11 +17,29 @@ import rs.ac.bg.fon.ps.domain.Radnik;
 import rs.ac.bg.fon.ps.so.AbstractSO;
 
 /**
+ * Predstavlja sistemsku operaciju koja pamti (cuva) novog radnika u bazi podataka.
  *
  * @author ACER
  */
 public class ZapamtiRadnikaSO extends AbstractSO {
 
+	/**
+	 * Proverava da li su ispunjeni svi preduslovi za cuvanje novog radnika u bazi podataka.
+	 * 
+	 * <ul>
+	 * <li>ulazni parametar ne sme biti null</li>
+	 * <li>ulazni parametar mora biti instanca klase Radnik</li>
+	 * <li>ime radnika ne sme biti prazan String</li>
+	 * <li>prezime radnika ne sme biti prazan String</li>
+	 * <li>broj telefona radnika mora biti broj domace mreze</li>
+	 * <li>mejl radnika ne sme biti prazan String</li>
+	 * <li>mejl radnika mora biti u formatu nesto@ps.fon.bg.ac.rs</li>
+	 * <li>radno mesto radnika ne sme biti null</li>
+	 * </ul>
+	 * 
+	 * @param param novi radnik kojeg je potrebno sacuvati
+	 * @throws Exception u slucaju da bilo koji od preduslova nije ispunjen
+	 */
 	@Override
 	protected void precondition(Object param) throws Exception {
 		if (param == null || !(param instanceof Radnik)) {
@@ -73,6 +91,12 @@ public class ZapamtiRadnikaSO extends AbstractSO {
 		}
 	}
 
+	/**
+	 * Pamti (cuva) novog radnika u bazi podataka.
+	 * 
+	 * @param param novi radnik kojeg je potrebno sacuvati
+	 * @throws Exception u slucaju da dodje do greske prilikom cuvanja novog radnika
+	 */
 	@Override
 	protected void executeOperation(Object param) throws Exception {
 		((Radnik) param).setRadnikID(broker.nadjiID(new Radnik()));
