@@ -10,6 +10,7 @@ import java.util.List;
 import rs.ac.bg.fon.ps.so.AbstractSO;
 
 /**
+ * Predstavlja sistemsku operaciju koja ucitava sve radnike iz baze podataka.
  *
  * @author ACER
  */
@@ -20,6 +21,12 @@ public class UcitajListuRadnikaSO extends AbstractSO {
 
 	}
 
+	/**
+	 * Ucitava sve radnike iz baze podataka.
+	 * 
+	 * @param param lista objekata tipa Radnik u koju se ucitava lista radnika iz baze
+	 * @throws Exception u slucaju da dodje do greske prilikom ucitavanja radnika iz baze podataka
+	 */
 	@Override
 	protected void executeOperation(Object param) throws Exception {
 		((List<Radnik>) param).addAll((List<Radnik>) broker.ucitajListu(new Radnik()));

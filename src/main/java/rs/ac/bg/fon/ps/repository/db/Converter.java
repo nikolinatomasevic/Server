@@ -15,11 +15,20 @@ import rs.ac.bg.fon.ps.domain.Revers;
 import rs.ac.bg.fon.ps.domain.StavkaReversa;
 
 /**
- *
+ * Predstavlja konvertor koji rezultat iz baze podataka tipa ResultSet pretvara u konkretnu implementaciju interfejsa OpstiDomenskiObjekat.
+ * 
  * @author ACER
  */
 public class Converter {
 
+	/**
+	 * Konvertuje rezultat iz baze podataka u konkretnu implementaciju interfejsa OpstiDomenskiObjekat.
+	 * 
+	 * @param odo na osnovu cije konkretne implementacije se odredje tip objekta koji se vraca kao rezultat
+	 * @param rs rezultat iz baze podataka koji je potrebno konvertovati
+	 * @return objekat popunjen vrednostima koje su dobijene iz baze podataka
+	 * @throws Exception u slucaju da dodje do greske prilikom ucitavanja vredosti iz baze podataka
+	 */
 	public static OpstiDomenskiObjekat convert(OpstiDomenskiObjekat odo, ResultSet rs) throws Exception {
 
 		if (odo instanceof Magacioner) {

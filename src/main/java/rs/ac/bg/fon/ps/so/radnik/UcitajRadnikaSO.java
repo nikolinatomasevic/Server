@@ -17,11 +17,29 @@ import rs.ac.bg.fon.ps.domain.Radnik;
 import rs.ac.bg.fon.ps.so.AbstractSO;
 
 /**
+ * Predstavlja sistemsku operaciju koja menja radnika u bazi podataka.
  *
  * @author ACER
  */
 public class UcitajRadnikaSO extends AbstractSO {
 
+	/**
+	 * Proverava da li su ispunjeni svi preduslovi za izmenu radnika u bazi podataka.
+	 * 
+	 * <ul>
+	 * <li>ulazni parametar ne sme biti null</li>
+	 * <li>ulazni parametar mora biti instanca klase Radnik</li>
+	 * <li>ime radnika ne sme biti prazan String</li>
+	 * <li>prezime radnika ne sme biti prazan String</li>
+	 * <li>broj telefona radnika mora biti broj domace mreze</li>
+	 * <li>mejl radnika ne sme biti prazan String</li>
+	 * <li>mejl radnika mora biti u formatu nesto@ps.fon.bg.ac.rs</li>
+	 * <li>radno mesto radnika ne sme biti null</li>
+	 * </ul>
+	 * 
+	 * @param param radnik kojeg je potrebno izmeniti
+	 * @throws Exception u slucaju da bilo koji od preduslova nije ispunjen
+	 */
 	@Override
 	protected void precondition(Object param) throws Exception {
 		if (param == null || !(param instanceof Radnik)) {
@@ -73,6 +91,12 @@ public class UcitajRadnikaSO extends AbstractSO {
 		}
 	}
 
+	/**
+	 * Menja radnika koji je proslednjen kao ulazni parametar u bazi podataka.
+	 * 
+	 * @param param radnik kojeg je potrebno izmeniti
+	 * @throws Exception u slucaju da dodje do greske prilikom izmene radnika
+	 */
 	@Override
 	protected void executeOperation(Object param) throws Exception {
 		broker.promeni((Radnik) param);

@@ -11,6 +11,7 @@ import rs.ac.bg.fon.ps.domain.StavkaReversa;
 import rs.ac.bg.fon.ps.so.AbstractSO;
 
 /**
+ * Predstavlja sistemsku operaciju koja ucitava sve reverse sa njihovim stavkama iz baze podataka.
  *
  * @author ACER
  */
@@ -21,6 +22,12 @@ public class UcitajListuReversaSO extends AbstractSO {
 
 	}
 
+	/**
+	 * Ucitava sve reverse sa njihovim stavkama iz baze podataka.
+	 * 
+	 * @param param lista objekata tipa Revers u koju se ucitava lista reversa iz baze
+	 * @throws Exception u slucaju da dodje do greske prilikom ucitavanja reversa iz baze podataka
+	 */
 	@Override
 	protected void executeOperation(Object param) throws Exception {
 		List<Revers> reversi = (List<Revers>) broker.ucitajListu(new Revers());
