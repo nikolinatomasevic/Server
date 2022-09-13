@@ -59,20 +59,6 @@ class UcitajMasinuIliAlatSOTest extends AbstractSOTest {
 	}
 
 	@Test
-	void testPreconditionKolicinaUMagacinuManjaOdNule() {
-		masinaIliAlat.setNaziv("Brusilica");
-		masinaIliAlat.setKolicinaUMagacinu(-17);
-		assertThrows(java.lang.Exception.class, () -> so.precondition(masinaIliAlat));
-	}
-
-	@Test
-	void testPreconditionKolicinaNaZaduzenjuManjaOdNule() {
-		masinaIliAlat.setNaziv("Brusilica");
-		masinaIliAlat.setKolicinaNaZaduzenju(-9);
-		assertThrows(java.lang.Exception.class, () -> so.precondition(masinaIliAlat));
-	}
-
-	@Test
 	void testExecuteOperationPromeniNaziv() {
 		try {
 			masinaIliAlat.setMasinaIliAlatID(1l);

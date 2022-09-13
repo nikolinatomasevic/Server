@@ -74,16 +74,6 @@ class UcitajRadnikaSOTest extends AbstractSOTest {
 	}
 
 	@Test
-	void testPreconditionMejlPrazanString() {
-		RadnoMesto radnoMesto = new RadnoMesto(2l, "Sef gradilista");
-		radnik.setIme("Marko");
-		radnik.setPrezime("Markovic");
-		radnik.setMejl("");
-		radnik.setRadnoMesto(radnoMesto);
-		assertThrows(java.lang.Exception.class, () -> so.precondition(radnik));
-	}
-
-	@Test
 	void testPreconditionMejlPogresanFormat() {
 		RadnoMesto radnoMesto = new RadnoMesto(2l, "Sef gradilista");
 		radnik.setIme("Marko");

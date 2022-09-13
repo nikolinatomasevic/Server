@@ -30,42 +30,14 @@ public class ZapamtiReversSO extends AbstractSO {
 		}
 		String message = "";
 		Revers revers = (Revers) param;
-		if (revers.getDatumIzdavanja() == null) {
-			message += "Polje 'datum izdavanja' reversa ne sme biti prazno!\n";
-		}
-		if (revers.getRadnik() == null) {
-			message += "Polje 'radnik' reversa ne sme biti prazno!\n";
-		}
-		if (revers.getStavke().isEmpty()) {
-			message += "Revers mora sadrzati barem jednu stavku!\n";
-		}
 		if (!message.equals("")) {
 			throw new Exception(message);
 		}
-
 		for (StavkaReversa stavka : revers.getStavke()) {
-			if (stavka.getRevers() == null) {
-				message += "Polje 'revers' stavke reversa ne sme biti prazno!\n";
+			int kolicinaUMagacinu = stavka.getMasinaIliAlat().getKolicinaUMagacinu();
+			if (stavka.getZaduzenaKolicina() > kolicinaUMagacinu) {
+				message += "Nedovoljna kolicina u magacinu za stavku br. " + stavka.getRb() + "!\n";
 			}
-			if (stavka.getRb() == null) {
-				message += "Polje 'rb' stavke reversa ne sme biti prazno!\n";
-			}
-			if (stavka.getZaduzenaKolicina() == null) {
-				message += "Polje 'zaduzena kolicina' (stavka br." + stavka.getRb() + ") ne sme biti prazno!\n";
-			} else {
-				if (stavka.getZaduzenaKolicina() <= 0) {
-					message += "Polje 'zaduzena kolicina' (stavka br." + stavka.getRb()
-							+ ") mora sadrzati vrednost koja je >0!\n";
-				}
-				int kolicinaUMagacinu = stavka.getMasinaIliAlat().getKolicinaUMagacinu();
-				if (stavka.getZaduzenaKolicina() > kolicinaUMagacinu) {
-					message += "Nedovoljna kolicina u magacinu za stavku br. " + stavka.getRb() + "!\n";
-				}
-			}
-			if (stavka.getMasinaIliAlat() == null) {
-				message += "Polje 'masina ili alat' (stavka br." + stavka.getRb() + ") ne sme biti prazno!\n";
-			}
-
 		}
 		if (!message.equals("")) {
 			throw new Exception(message);

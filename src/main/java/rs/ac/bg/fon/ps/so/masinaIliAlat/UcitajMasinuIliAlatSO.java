@@ -22,8 +22,6 @@ public class UcitajMasinuIliAlatSO extends AbstractSO {
 	 * <li>ulazni parametar ne sme biti null</li>
 	 * <li>ulazni parametar mora biti instanca klase MasinaIliAlat</li>
 	 * <li>naziv masine ili alata ne sme biti prazan String</li>
-	 * <li>kolicina u magacinu masine ili alata mora biti >= 0</li>
-	 * <li>kolicina na zaduzenju masine ili alata mora biti >= 0</li>
 	 * </ul>
 	 * 
 	 * @param param masina ili alat koji je potrebno izmeniti
@@ -38,12 +36,6 @@ public class UcitajMasinuIliAlatSO extends AbstractSO {
 		MasinaIliAlat masinaIliAlat = (MasinaIliAlat) param;
 		if (masinaIliAlat.getNaziv().isEmpty()) {
 			message += "Polje 'naziv' masine ili alata ne sme biti prazno!\n";
-		}
-		if (masinaIliAlat.getKolicinaUMagacinu() < 0) {
-			message += "Polje 'kolicina u magacinu' masine ili alata mora sadrzati vrednost koja je >=0!\n";
-		}
-		if (masinaIliAlat.getKolicinaNaZaduzenju() < 0) {
-			message += "Polje 'kolicina na zaduzenju' masine ili alata mora sadrzati vrednost koja je >=0!\n";
 		}
 		if (!message.equals("")) {
 			throw new Exception(message);

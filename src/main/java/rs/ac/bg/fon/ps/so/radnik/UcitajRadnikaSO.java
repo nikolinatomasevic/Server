@@ -32,7 +32,6 @@ public class UcitajRadnikaSO extends AbstractSO {
 	 * <li>ime radnika ne sme biti prazan String</li>
 	 * <li>prezime radnika ne sme biti prazan String</li>
 	 * <li>broj telefona radnika mora biti broj domace mreze</li>
-	 * <li>mejl radnika ne sme biti prazan String</li>
 	 * <li>mejl radnika mora biti u formatu nesto@ps.fon.bg.ac.rs</li>
 	 * <li>radno mesto radnika ne sme biti null</li>
 	 * </ul>
@@ -76,12 +75,8 @@ public class UcitajRadnikaSO extends AbstractSO {
 				message += "Polje 'broj telefona' radnika mora biti broj domace mreze!\n";
 			}
 		}
-		if (radnik.getMejl().isEmpty()) {
-			message += "Polje 'mejl' radnika ne sme biti prazno!\n";
-		} else {
-			if (!radnik.getMejl().endsWith("@ps.fon.bg.ac.rs")) {
-				message += "Polje 'mejl' radnika mora biti u formatu nesto@ps.fon.bg.ac.rs!\n";
-			}
+		if (!radnik.getMejl().endsWith("@ps.fon.bg.ac.rs")) {
+			message += "Polje 'mejl' radnika mora biti u formatu nesto@ps.fon.bg.ac.rs!\n";
 		}
 		if (radnik.getRadnoMesto() == null) {
 			message += "Polje 'radno mesto' radnika ne sme biti prazno\n!";
