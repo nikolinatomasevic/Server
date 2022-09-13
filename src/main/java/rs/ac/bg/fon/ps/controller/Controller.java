@@ -30,7 +30,7 @@ import rs.ac.bg.fon.ps.so.revers.ZapamtiReversSO;
 
 /**
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class Controller {
 

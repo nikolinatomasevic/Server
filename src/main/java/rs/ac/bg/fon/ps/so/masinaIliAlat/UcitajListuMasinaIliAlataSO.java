@@ -12,7 +12,7 @@ import rs.ac.bg.fon.ps.so.AbstractSO;
 /**
  * Predstavlja sistemsku operaciju koja ucitava sve masine i alat iz baze podataka.
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class UcitajListuMasinaIliAlataSO extends AbstractSO {
 

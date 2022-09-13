@@ -12,7 +12,7 @@ import rs.ac.bg.fon.ps.so.AbstractSO;
 /**
  * Predstavlja sistemsku operaciju koja ucitava sva radna mesta iz baze podataka.
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class UcitajListuRadnihMestaSO extends AbstractSO {
 

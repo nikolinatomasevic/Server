@@ -17,7 +17,7 @@ import rs.ac.bg.fon.ps.domain.StavkaReversa;
  * Predstavlja brokera baze podataka.
  * 
  * @see RepositoryDB
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class BrokerDB implements RepositoryDB<OpstiDomenskiObjekat> {
 

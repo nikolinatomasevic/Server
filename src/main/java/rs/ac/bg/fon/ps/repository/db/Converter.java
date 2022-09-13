@@ -17,7 +17,7 @@ import rs.ac.bg.fon.ps.domain.StavkaReversa;
 /**
  * Predstavlja konvertor koji rezultat iz baze podataka tipa ResultSet pretvara u konkretnu implementaciju interfejsa OpstiDomenskiObjekat.
  * 
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class Converter {
 

@@ -13,7 +13,7 @@ import java.util.Properties;
 /**
  * Predstavlja klasu za uspostavljanje konekcije sa bazom podataka.
  * 
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class DBConnectionFactory {
 

@@ -19,7 +19,7 @@ import rs.ac.bg.fon.ps.so.AbstractSO;
 /**
  * Predstavlja sistemsku operaciju koja menja radnika u bazi podataka.
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class UcitajRadnikaSO extends AbstractSO {
 

@@ -11,7 +11,7 @@ import rs.ac.bg.fon.ps.so.AbstractSO;
 /**
  * Predstavlja sistemsku operaciju koja pamti (cuva) novu masinu ili alat u bazi podataka.
  * 
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class ZapamtiMasinuIliAlatSO extends AbstractSO {
 

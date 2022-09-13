@@ -12,7 +12,7 @@ import rs.ac.bg.fon.ps.so.AbstractSO;
 /**
  * Predstavlja sistemsku operaciju koja ucitava masine i alat iz baze podataka koji ispunjavaju odredjene kriterijume pretrage.
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class NadjiMasineIliAlatSO extends AbstractSO {
 

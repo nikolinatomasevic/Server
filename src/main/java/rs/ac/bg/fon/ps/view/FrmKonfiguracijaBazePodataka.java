@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class FrmKonfiguracijaBazePodataka extends javax.swing.JDialog {
 

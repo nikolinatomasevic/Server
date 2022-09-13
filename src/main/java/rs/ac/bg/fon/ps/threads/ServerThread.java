@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class ServerThread extends Thread {
 

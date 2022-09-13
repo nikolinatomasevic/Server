@@ -15,7 +15,7 @@ import rs.ac.bg.fon.ps.threads.PrijavljeniKorisniciThread;
 
 /**
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class FrmMain extends javax.swing.JFrame {
 

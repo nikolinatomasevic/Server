@@ -12,7 +12,7 @@ import rs.ac.bg.fon.ps.repository.Repository;
  * uspostavljanje i prekidanje konekcije sa bazom podataka, kao i commit i rollback transakcije.
  *
  * @see Repository
- * @author ACER
+ * @author nikolinatomasevic
  */
 public interface RepositoryDB<T> extends Repository<T> {
 

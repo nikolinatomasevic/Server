@@ -13,7 +13,7 @@ import rs.ac.bg.fon.ps.so.AbstractSO;
 /**
  * Predstavlja sistemsku operaciju koja ucitava sve reverse sa njihovim stavkama iz baze podataka.
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class UcitajListuReversaSO extends AbstractSO {
 

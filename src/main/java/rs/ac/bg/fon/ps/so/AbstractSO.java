@@ -11,7 +11,7 @@ import rs.ac.bg.fon.ps.repository.db.BrokerDB;
 /**
  * Predstavlja sistemsku operaciju.
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public abstract class AbstractSO {
 

@@ -12,7 +12,7 @@ import rs.ac.bg.fon.ps.so.AbstractSO;
 /**
  * Predstavlja sistemsku operaciju koja ucitava sve radnike iz baze podataka.
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class UcitajListuRadnikaSO extends AbstractSO {
 

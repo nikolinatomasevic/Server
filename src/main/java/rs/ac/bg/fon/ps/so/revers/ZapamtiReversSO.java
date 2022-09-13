@@ -13,7 +13,7 @@ import rs.ac.bg.fon.ps.so.AbstractSO;
 /**
  * Predstavlja sistemsku operaciju koja pamti (cuva) novi revers sa svim stavkama u bazi podataka.
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class ZapamtiReversSO extends AbstractSO {
 

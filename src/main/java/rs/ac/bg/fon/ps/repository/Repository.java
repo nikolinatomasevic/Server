@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Predstavlja genericki interfejs koji ima osnovne operacije koje omogucavaju perzistenciju.
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public interface Repository<T> {
 

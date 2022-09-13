@@ -13,7 +13,7 @@ import rs.ac.bg.fon.ps.so.AbstractSO;
 /**
  * Predstavlja sistemsku operaciju koja ucitava stavke reversa iz baze podataka koje ispunjavaju odredjene kriterijume pretrage.
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class NadjiReverseSO extends AbstractSO {
 

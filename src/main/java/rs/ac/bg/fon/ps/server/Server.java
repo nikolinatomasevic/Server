@@ -9,7 +9,7 @@ import rs.ac.bg.fon.ps.view.FrmMain;
 
 /**
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class Server {
 
